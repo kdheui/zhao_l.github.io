@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 80%; /* 调整表格宽度 */
+            height: 50vh; /* 调整表格高度 */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; /* 确保裁切中心 */
+        }
+    </style>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('container');
+            const images = [
+                'IMG_C5F961F4DC22-1.jpeg',
+                'IMG_00CEA9135754-1.jpeg',
+                'IMG_7413.jpg',
+                'IMG_A2F4E63E95A6-1.jpeg',
+                'IMG_0CC750543768-1.jpeg',
+                'IMG_582942C0E043-1.jpeg',
+                'IMG_7384.jpg',
+                'IMG_192B4A459C42-1.jpeg',
+                'IMG_61A3330AD90A-1.jpeg',
+                'IMG_F8E0DA7B5854-1.jpeg',
+                'IMG_B3BB48A5FAE4-1.jpeg',
+                'IMG_7468.jpg',
+                'IMG_8376.jpg',
+                'IMG_C1E194A01A4E-1.jpeg',
+                'IMG_D87F161459E0-1.jpeg',
+                'IMG_8379.jpg'
+                // 添加更多图片
+            ];
+
+            images.forEach((imageSrc) => {
+                const image = document.createElement('img');
+                image.src = imageSrc;
+                container.appendChild(image);
+            });
+
+            const imagesList = document.querySelectorAll('img');
+
+            container.addEventListener('mouseover', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    const randomImage = imagesList[Math.floor(Math.random() * imagesList.length)];
+                    randomImage.src = images[Math.floor(Math.random() * images.length)];
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>

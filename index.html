@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOMB</title>
+        <link rel="shortcut icon" href="IMG_8178.png">
+        <meta charset="UTF-8"/>
+        <style>
+        body {
+            background-image:url("background.png");
+        }
+
+        #biao_ti {
+            position: absolute;
+            color: rgb(0, 0, 0);
+            background-color: #ff0000;
+            text-shadow: 3px 3px 1px rgb(255, 255, 255);
+            border: 10px solid rgb(0, 0, 0);
+            left: 30vw;
+            width: 700px;
+            top: 60px;
+            font-size: 80px;
+            font-family: right;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+            #biao_ti:hover {
+            color: #ff8000;
+            transform: scale(0.5) rotateZ(5deg) scale(3); /* 先缩小，再旋转，最后放大 */
+        }
+
+        #BOMB_tie_zhi {
+            position: absolute;
+            z-index: 11;
+            top: 20vh;
+            right: 60vw;
+            width: 30vw;
+            height: 20vw;
+            rotate: -15deg;
+        }
+
+        #ai_xin_tie_zhi {
+            position: absolute;
+            top: 80vh;
+            z-index: 40;
+            left: 60vw;
+            width: 20vw;
+            height: 25vw;
+            rotate: 10deg;
+        }
+
+        
+
+        #man_hua_YOSHI {
+            position: absolute;
+            top: 70vh;
+            z-index: 11;
+            left: 3vw;
+            border: 6px solid rgb(255, 189, 9);
+            width: 30vw;
+            height: 20vw;
+            
+        }
+
+        #man_hua_YOSHI:hover {
+            transform: scale(1.1) rotate(10deg); /* 缩放和旋转效果 */
+            box-shadow: 0 0 20px rgba(255, 189, 9, 0.8); /* 阴影效果，可以根据需要调整 */
+            background: linear-gradient(to right, #ffdb58, #ffd700); /* 颜色渐变效果 */
+        }
+
+        #gan_tan_hao_qiu {
+            position: absolute;
+            top: 60vh;
+            z-index: 11;
+            left: 75vw;
+            border: 6px solid rgb(255, 0, 0);
+            width: 20vw;
+            height: 20vw;
+           
+        }
+
+        #colorful {
+            position: absolute;
+            z-index: 11;
+            left: 75vw;
+            top: 10vh;
+            border: 6px solid rgb(255, 255, 255);
+            width: 15vw;
+            height: 20vw;
+            
+        }
+
+        #colorful:hover, #gan_tan_hao_qiu:hover {
+            transform: scale(1.1); /* 鼠标悬停时图片放大 */
+            transition: transform 0.3s; /* 添加过渡效果 */
+        }
+
+        #colorful:hover {
+            filter: brightness(120%); /* 鼠标悬停时提高亮度 */
+        }
+
+        #gan_tan_hao_qiu:hover {
+            filter: grayscale(50%); /* 鼠标悬停时添加灰度效果 */
+        }
+
+        video {
+               position: absolute;
+               z-index: 1;
+               width: 40vw;
+               border-radius: 30% 20% 15% 10%;
+               top: 30vh;
+               left: 30vw;
+        }
+
+       
+        </style>
+       
+    </head>
+    <body>
+        <div id="biao_ti">!BOMB WITH ME!</div>
+        <img id="colorful" src="IMG_7586.JPG">
+        <img id="man_hua_YOSHI" src="IMG_8184.jpg">
+        <img id="gan_tan_hao_qiu" src="IMG_7587.jpg">
+        <img id="BOMB_tie_zhi" src="zhuti.png">
+        <img id="ai_xin_tie_zhi" src="tiezhi2.png">
+        
+
+        <a href="page3.html"><video loop controls id="sam" src="bomb.mov" type="video/mov"></video></a>
+
+
+    </body>
+</html>
